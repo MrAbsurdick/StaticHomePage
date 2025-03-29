@@ -34,7 +34,6 @@ form>input[type=submit]{
     padding: 9px;
     border-radius: 0px 3px 3px 0px;
     color: var(--color-fg-3);
-    border-left: var(--color-fg-3) solid 3px;
     user-select: none;
     cursor: pointer;
     transition: 200ms;
@@ -54,18 +53,21 @@ form>input[type=text]{
 form>input[type=checkbox]{
     border-radius: 0px;
     position: relative;
-    border-left: var(--color-fg-3) solid 3px;
+    border-right: var(--color-fg-3) solid 2px;
+    border-left: var(--color-fg-3) solid 2px;
 }
 form>input:checked::after{
     position: absolute;
     content: var(--svg-blank);
 }
 form{
+    backdrop-filter: blur(4px);
     border-radius: 4px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
 }
 form:hover{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(12px);
 }
 form:focus-within{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
@@ -81,13 +83,19 @@ nav{
     margin: 12px;
     padding: 6px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    backdrop-filter: blur(4px);
+    z-index: 0;
 }
 nav:hover{
     background-color: var(--color-bg-2);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(12px);
 }
 
 nav>a{
+    z-index: 1;
     color: var(--color-fg-3);
     opacity: 0.75;
     border-radius: 3px;
