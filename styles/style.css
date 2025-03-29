@@ -65,9 +65,7 @@ nav{
     justify-content: center;
 }
 row>nav{
-    /* justify-content: unset; */
     min-width: 192px;
-    /* width: fit-content; */
 
 }
 
@@ -77,10 +75,12 @@ nav>a{
     white-space: nowrap;
 }
 nav>a>button>img{
-    filter: blur(0.5px);
+    filter: blur(1px);
+    padding: 8px;
     opacity: 0.8;
 }
 nav>a:hover>button>img{
+    padding: 2px;
     opacity: 1;
     filter: blur(0px);
 }
